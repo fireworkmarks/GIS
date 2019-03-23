@@ -1,0 +1,65 @@
+body
+{
+	margin: 0 0 0 0;
+	background-color: #A6E1EC;
+}
+h1{
+	color: #0000FF ;
+	font-style: italic;
+}
+.medial
+{
+	width: 50%;
+	margin: auto auto;
+	background-color:  #88DDFF;
+	border-radius: 10px;
+	background-image: url(../images/006_login.jpg);
+}
+.medial-box
+{
+	text-align: center;
+	padding-top: 30px;
+}
+.inputBox
+{
+	margin: 0 auto;
+	padding-bottom: 15px;
+	padding-top: 25px;
+	width: 300px;
+}
+.inputBox>textarea
+{
+	vertical-align: middle;
+	width:180px;
+	height:150px;
+	resize: none;
+}
+.Button-box
+{
+	margin: auto;text-align: center;
+}
+.Button
+{
+	height: 40px;
+    width: 250px;
+    border-radius: 10px;
+    background-color: #8df;
+    margin: 30px;
+    cursor: pointer;
+    font-style: italic;
+    font-size: 16px;
+    color: #269ABC;
+    font-weight: bold
+}
+.error
+{
+	font-size: 18px; font-family:  '仿宋';
+}
+.input{
+	padding: 5px;
+	width: 180px;
+	display: inline-block;
+	border-radius: 5px;
+	font-size: 13px;
+	font-style: italic ;
+}
