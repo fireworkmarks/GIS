@@ -15,5 +15,16 @@ public interface UserService {
 
     boolean modify(String name, String pass, String newpass);
 
+<<<<<<< HEAD
+=======
+    boolean modify(String name, String mark, String rmark, String tel, String info);
+
+    boolean upload(String name, String mark, String img);
+
+    User getAllUser();
+
+    boolean useradmin(String name, String mark, String pwdadm);
+
+>>>>>>> 修改代码仓库数据,清理无用数据
 }
 

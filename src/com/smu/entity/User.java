@@ -12,6 +12,10 @@ import java.util.Objects;
  */
 @Entity
 public class User {
+<<<<<<< HEAD
+=======
+    private Integer ID;
+>>>>>>> 修改代码仓库数据,清理无用数据
     private String username;
     private String password;
     private String usertel;
@@ -22,6 +26,19 @@ public class User {
     private String passwordadm;
 
     @Id
+<<<<<<< HEAD
+=======
+    @Column(name = "id")
+    public Integer getID() {
+        return ID;
+    }
+
+    public void setID(Integer ID) {
+        this.ID = ID;
+    }
+
+    @Basic
+>>>>>>> 修改代码仓库数据,清理无用数据
     @Column(name = "username")
     public String getUsername() {
         return username;
@@ -106,7 +123,12 @@ public class User {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         User user = (User) o;
+<<<<<<< HEAD
         return Objects.equals(username, user.username) &&
+=======
+        return  Objects.equals(ID, user.ID) &&
+                Objects.equals(username, user.username) &&
+>>>>>>> 修改代码仓库数据,清理无用数据
                 Objects.equals(password, user.password) &&
                 Objects.equals(usertel, user.usertel) &&
                 Objects.equals(useremail, user.useremail) &&
@@ -118,6 +140,10 @@ public class User {
 
     @Override
     public int hashCode() {
+<<<<<<< HEAD
         return Objects.hash(username, password, usertel, useremail, userrmark, userimg, userinfo, passwordadm);
+=======
+        return Objects.hash(ID, username, password, usertel, useremail, userrmark, userimg, userinfo, passwordadm);
+>>>>>>> 修改代码仓库数据,清理无用数据
     }
 }

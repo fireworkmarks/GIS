@@ -53,8 +53,13 @@
                         <span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu xu" >
+<<<<<<< HEAD
                         <li><a href="Modify.html?username=${sessionScope.user}">修改密码</a></li>
                         <li><a href="UserInform.html?username=${sessionScope.user}">个人信息</a></li>
+=======
+                        <li><a href="modify.jsp?username=${sessionScope.user}">修改密码</a></li>
+                        <li><a href="userInfo.jsp?username=${sessionScope.user}">个人信息</a></li>
+>>>>>>> 修改代码仓库数据,清理无用数据
                         <li><a href="exit.action">退出</a></li>
                     </ul>
                 </li>

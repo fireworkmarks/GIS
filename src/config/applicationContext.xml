@@ -9,10 +9,18 @@
     <context:component-scan base-package="com.smu"/>
 
     <!-- 加载数据库属性配置文件 -->
+<<<<<<< HEAD
+=======
+    <!-- 所有的数据库访问信息将存放在这个表之中,通过修改表信息就可以获取相应表的权限-->
+>>>>>>> 修改代码仓库数据,清理无用数据
     <context:property-placeholder location="classpath:/config/db.properties" />
 
     <!-- 定义数据源Bean，使用c3p0数据源实现，并注入数据源的必要信息 -->
     <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
+<<<<<<< HEAD
+=======
+        <!-- 注入相应的用户信息及配置信息-->
+>>>>>>> 修改代码仓库数据,清理无用数据
         <property name="driverClass" value="${db.driverClassName}"/>
         <property name="jdbcUrl" value="${db.url}"/>
         <property name="user" value="${db.username}"/>

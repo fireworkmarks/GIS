@@ -10,7 +10,10 @@ html, body{
 		margin-top: 2px;
 		height: 100%;
 		background-image: url(../images/bei.jpg) ;
+<<<<<<< HEAD
 		background-repeat-y;
+=======
+>>>>>>> 修改代码仓库数据,清理无用数据
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: center;

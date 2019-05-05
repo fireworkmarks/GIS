@@ -17,6 +17,11 @@ import java.util.List;
 @Service
 @Scope("prototype")
 public class UserServiceImpl implements UserService {
+<<<<<<< HEAD
+=======
+    private String savePath;
+
+>>>>>>> 修改代码仓库数据,清理无用数据
 
     @Autowired
     private BaseDAO baseDAO;
@@ -58,13 +63,73 @@ public class UserServiceImpl implements UserService {
         u.setPassword(pass);
         List users = baseDAO.find(u);
         if (users.size() != 0){
+<<<<<<< HEAD
             User v = new User();
             v.setUsername(name);
+=======
+            User v = (User) users.get(0);
+>>>>>>> 修改代码仓库数据,清理无用数据
             v.setPassword(newpass);
             return baseDAO.update(v);
         }
        return false;
     }
 
+<<<<<<< HEAD
+=======
+
+    @Override
+    public boolean modify(String name, String mark, String rmark, String tel, String info){
+
+        User u = new User();
+        u.setUsername(name);
+        u.setUserrmark(mark);
+        List users = baseDAO.find(u);
+        if (users.size() != 0){
+            User v = (User) users.get(0);
+            if (rmark != null) v.setUserrmark(rmark);
+            if (tel != null) v.setUsertel(tel);
+            if (info != null) v.setUserinfo(info);
+            return baseDAO.update(v);
+        }
+        return false;
+    }
+
+    @Override
+    public  boolean upload(String name, String mark, String img){
+        User u = new User();
+        u.setUsername(name);
+        u.setUserrmark(mark);
+        List users = baseDAO.find(u);
+        if (users.size() != 0){
+            User v = (User) users.get(0);
+            v.setUserimg(img);
+            return baseDAO.update(v);
+        }
+        return false;
+    }
+
+    @Override
+    public User getAllUser(){
+        User u = new User();
+        List users = baseDAO.find(u);
+        return (User) users;
+    }
+
+    @Override
+    public boolean useradmin(String name, String mark, String pwdadm){
+        User u = new User();
+        u.setUsername(name);
+        u.setUserrmark(mark);
+        List users = baseDAO.find(u);
+        if (users.size() != 0) {
+            User v = (User) users.get(0);
+            v.setPasswordadm(pwdadm);
+            return baseDAO.update(v);
+        }
+        return false;
+    }
+
+>>>>>>> 修改代码仓库数据,清理无用数据
 }
 

@@ -32,6 +32,11 @@ public class LoginAction implements Action {
     private String passwordadm;
     private String oderuserpwd;
     private String muserpwd;
+<<<<<<< HEAD
+=======
+    private String picFileName;
+    private String pic;
+>>>>>>> 修改代码仓库数据,清理无用数据
     private HttpServletResponse response;
 
     @Override
@@ -47,9 +52,24 @@ public class LoginAction implements Action {
             ctx.put("tip", "服务器提示：您已经成功登陆");
             ctx.getSession().put("user", getUsername());
             ctx.getSession().put("rmark", user.getUserrmark());
+<<<<<<< HEAD
             if (user.getPasswordadm().equals("超级管理员")) return SUPERADMIN;
             else if (user.getPasswordadm().equals("管理员")) return ADMIN;
             else return SUCCESS;
+=======
+            if (user.getPasswordadm().equals("超级管理员")) {
+                ctx.getSession().put("mark",1);
+                return SUPERADMIN;
+            }
+            else if (user.getPasswordadm().equals("管理员")) {
+                ctx.getSession().put("mark",2);
+                return ADMIN;
+            }
+            else {
+                ctx.getSession().put("mark",3);
+                return SUCCESS;
+            }
+>>>>>>> 修改代码仓库数据,清理无用数据
         }
         ctx.put("tip", "服务器提示：登陆失败，请重新登陆");
         return ERROR;
@@ -66,11 +86,22 @@ public class LoginAction implements Action {
             System.out.println(getUserrmark());
             return SUCCESS;
         }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 修改代码仓库数据,清理无用数据
         return ERROR;
     }
 
     public String Modify() throws Exception {
+<<<<<<< HEAD
         if (userService.modify(username,oderuserpwd,muserpwd)) return SUCCESS;
+=======
+        ActionContext ctx = ActionContext.getContext();
+        String userNameModify = ctx.getSession().get("user").toString();
+        System.out.println("==============================="+userNameModify);
+        if (userService.modify(userNameModify,oderuserpwd,muserpwd)) return SUCCESS;
+>>>>>>> 修改代码仓库数据,清理无用数据
         return ERROR;
     }
 
@@ -81,6 +112,11 @@ public class LoginAction implements Action {
         ctx.getSession().put("adm",null);
         return SUCCESS;
     }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 修改代码仓库数据,清理无用数据
     public String Back() throws Exception{
         return SUCCESS;
     }
@@ -159,4 +195,23 @@ public class LoginAction implements Action {
     public void setMuserpwd(String muserpwd) {
         this.muserpwd = muserpwd;
     }
+<<<<<<< HEAD
+=======
+
+    public String getPicFileName() {
+        return picFileName;
+    }
+
+    public void setPicFileName(String picFileName) {
+        this.picFileName = picFileName;
+    }
+
+    public String getPic() {
+        return pic;
+    }
+
+    public void setPic(String pic) {
+        this.pic = pic;
+    }
+>>>>>>> 修改代码仓库数据,清理无用数据
 }

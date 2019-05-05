@@ -16,6 +16,7 @@
     }
     setInterval(windowHeight, 10)//每半秒执行一次windowHeight函数
 
+<<<<<<< HEAD
 //检查输入数据的合法性
 	function checkForm()
 			{
@@ -44,6 +45,9 @@
 				return true;
 			}
 			
+=======
+
+>>>>>>> 修改代码仓库数据,清理无用数据
 //点击取消事件函数			
 function back()
 {

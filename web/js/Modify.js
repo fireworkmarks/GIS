@@ -27,9 +27,15 @@
 					document.getElementById("error").innerHTML = "旧密码不能为空";
 					return false;
 				}
+<<<<<<< HEAD
 				if(oderuserPwd.length!=6)
 				{
 					document.getElementById("error").innerHTML = "旧密码为6位";
+=======
+				if(oderuserPwd.length<6)
+				{
+					document.getElementById("error").innerHTML = "旧密码不小于6位";
+>>>>>>> 修改代码仓库数据,清理无用数据
 					return false;
 				}
 				if (MuserPwd== null || MuserPwd == "") {
