@@ -4,10 +4,7 @@ package com.smu.dao;
  * @author LeagueRT
  * @create 2018/12/7-14:52
  */
-<<<<<<< HEAD
-import com.smu.dao.BaseDAO;
-=======
->>>>>>> 修改代码仓库数据,清理无用数据
+
 import org.hibernate.FlushMode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
@@ -68,17 +65,10 @@ public class BaseDAOImpl implements BaseDAO {
         }
     }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 修改代码仓库数据,清理无用数据
     @Override
     public List find(Object o) {
         return this.getHt().findByExample(o);
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> 修改代码仓库数据,清理无用数据
 }
 

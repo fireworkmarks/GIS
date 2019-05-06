@@ -17,12 +17,6 @@ import java.util.List;
 @Service
 @Scope("prototype")
 public class UserServiceImpl implements UserService {
-<<<<<<< HEAD
-=======
-    private String savePath;
-
->>>>>>> 修改代码仓库数据,清理无用数据
-
     @Autowired
     private BaseDAO baseDAO;
 
@@ -63,20 +57,13 @@ public class UserServiceImpl implements UserService {
         u.setPassword(pass);
         List users = baseDAO.find(u);
         if (users.size() != 0){
-<<<<<<< HEAD
-            User v = new User();
-            v.setUsername(name);
-=======
             User v = (User) users.get(0);
->>>>>>> 修改代码仓库数据,清理无用数据
             v.setPassword(newpass);
             return baseDAO.update(v);
         }
        return false;
     }
 
-<<<<<<< HEAD
-=======
 
     @Override
     public boolean modify(String name, String mark, String rmark, String tel, String info){
@@ -129,7 +116,5 @@ public class UserServiceImpl implements UserService {
         }
         return false;
     }
-
->>>>>>> 修改代码仓库数据,清理无用数据
 }
 

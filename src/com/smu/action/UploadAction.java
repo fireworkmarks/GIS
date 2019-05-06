@@ -13,13 +13,9 @@ import java.io.FileOutputStream;
  * @create 2018/12/9-14:39
  */
 public class UploadAction extends ActionSupport {
-<<<<<<< HEAD
     private String title;
     private File pic;
     private String picContentType;
-=======
-    private File pic;
->>>>>>> 修改代码仓库数据,清理无用数据
     private String picFileName;
     private String savePath;
     public void setSavePath(String savePath){
@@ -53,7 +49,6 @@ public class UploadAction extends ActionSupport {
         this.picFileName = picFileName;
     }
 
-<<<<<<< HEAD
     public String getPicContentType() {
         return picContentType;
     }
@@ -62,8 +57,6 @@ public class UploadAction extends ActionSupport {
         this.picContentType = picContentType;
     }
 
-=======
->>>>>>> 修改代码仓库数据,清理无用数据
     public File getPic() {
         return pic;
     }
@@ -72,7 +65,6 @@ public class UploadAction extends ActionSupport {
         this.pic = pic;
     }
 
-<<<<<<< HEAD
     public String getTitle() {
         return title;
     }
@@ -80,6 +72,4 @@ public class UploadAction extends ActionSupport {
     public void setTitle(String title) {
         this.title = title;
     }
-=======
->>>>>>> 修改代码仓库数据,清理无用数据
 }

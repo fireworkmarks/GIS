@@ -5,14 +5,10 @@
 <hibernate-mapping>
 
     <class name="com.smu.entity.User" table="user" schema="gis">
-<<<<<<< HEAD
-        <id name="username" column="username"/>
-=======
         <id name="ID" column="id" type="java.lang.Integer">
             <generator class="identity" />
         </id>
         <property name="username" column="username"/>
->>>>>>> 修改代码仓库数据,清理无用数据
         <property name="password" column="password"/>
         <property name="usertel" column="usertel"/>
         <property name="useremail" column="useremail"/>
