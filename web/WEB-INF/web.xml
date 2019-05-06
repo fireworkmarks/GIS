@@ -22,18 +22,6 @@
         <url-pattern>/*</url-pattern>
     </filter-mapping>
 
-<<<<<<< HEAD
-=======
-    <!--<servlet>-->
-        <!--<servlet-name>CSS</servlet-name>-->
-    <!--</servlet>-->
-    <!--<servlet-mapping>-->
-        <!--<servlet-name>CSS</servlet-name>-->
-        <!--<url-pattern>/</url-pattern>-->
-    <!--</servlet-mapping>-mapping> -->
-
-
->>>>>>> 修改代码仓库数据,清理无用数据
     <!-- 添加对spring的支持 -->
     <context-param>
         <param-name>contextConfigLocation</param-name>
@@ -44,8 +32,4 @@
     <listener>
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
-<<<<<<< HEAD
-=======
-
->>>>>>> 修改代码仓库数据,清理无用数据
 </web-app>

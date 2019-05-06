@@ -29,11 +29,7 @@
 
         <action name="modify" class="com.smu.action.LoginAction" method="Modify">
             <result name="success">login.jsp</result>
-<<<<<<< HEAD
             <result name="error">modify.jsp</result>
-=======
-            <result name="error">/modify.jsp</result>
->>>>>>> 修改代码仓库数据,清理无用数据
         </action>
 
         <action name="back" class="com.smu.action.LoginAction" method="Back">
@@ -46,10 +42,6 @@
             <result name="error">WEB-INF/default.html</result>
         </action>
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 修改代码仓库数据,清理无用数据
         <action name="movie" class="com.smu.action.DocAction" method="Video">
             <result name="success">WEB-INF/video.jsp</result>
             <result name="error">WEB-INF/default.html</result>

@@ -57,19 +57,11 @@
                     </div>
                     <div class="inputBox">
                         <h3>确认密码</h3>
-<<<<<<< HEAD
-                        <input class="input" type="password" id="MuserPwdSure" name="muserpwdsure" placeholder="请确认密码（6位）"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <font id="error" color="red" class="error"></font>
-                    </div>
-                    <div class="inputBox">
-                        <a href="login.jsp"  role="button">返回登陆</a>
-=======
                         <input class="input" type="password" id="MuserPwdSure" name="muserpwdsure" placeholder="请确认密码"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <font id="error" color="red" class="error"></font>
                     </div>
                     <div class="inputBox">
                         <a href="login.jsp" role="button">返回登陆</a>
->>>>>>> 修改代码仓库数据,清理无用数据
                     </div>
                 </div>
                 <input class="loginButton" type="submit" value="注册" />

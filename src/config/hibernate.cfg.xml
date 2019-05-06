@@ -7,26 +7,17 @@
     <session-factory>
         <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
         <property name="connection.url">jdbc:mysql://localhost:3306/gis</property>
-<<<<<<< HEAD
-=======
+
         <!-- 设置数据库表字段可见、数据库表策略、以及数据库方言-->
->>>>>>> 修改代码仓库数据,清理无用数据
         <property name="show_sql">true</property>
         <property name="format_sql">true</property>
         <property name="hbm2ddl.auto">update</property>
         <property name="dialect">org.hibernate.dialect.MySQL57Dialect</property>
-<<<<<<< HEAD
-        <mapping resource="com/smu/entity/User.hbm.xml"/>
-        <mapping class="com.smu.entity.User"/>
-        <mapping class="com.smu.entity.DocPic"/>
-        <mapping resource="com/smu/entity/DocPic.hbm.xml"/>
-=======
         <!-- 配置相关的实体，通过实体反向生成数据库表 -->
         <mapping resource="com/smu/entity/User.hbm.xml"/>
         <mapping class="com.smu.entity.User"/>
         <mapping class="com.smu.entity.Doc"/>
         <mapping resource="com/smu/entity/Doc.hbm.xml"/>
->>>>>>> 修改代码仓库数据,清理无用数据
         <mapping class="com.smu.entity.DocRadiourl"/>
         <mapping resource="com/smu/entity/DocRadiourl.hbm.xml"/>
     </session-factory>

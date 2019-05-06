@@ -46,11 +46,7 @@
               <p class="defaultS">请输入密码</p>
               <h3>密码</h3>
               <input class="input" type="password" name="password" id="password" placeholder="请输入密码" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<<<<<<< HEAD
-              </font>
-=======
               <font id="error" color="red" class="error"></font>
->>>>>>> 修改代码仓库数据,清理无用数据
             </div >
             <div class="inputBox" >
               <a href="register.jsp" style="text-decoration:none" role="button">注册</a>
