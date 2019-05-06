@@ -31,9 +31,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 							</div>
 						</div>
 					<div class="inputBox" style="text-align: center;margin-bottom: 30px;">
-						<form action="upload.action" method="post" onsubmit="return checkForm()">
+						<form action="upload.action" method="post" enctype="multipart/form-data" onsubmit="return checkForm()">
 							<label style="padding-bottom: 20px;">上传图片</label>
-							<input  type="file" name="pic" style="background-color: white;margin: auto;width: 243px;">
+							<input  type="file" name="File" style="background-color: white;margin: auto;width: 243px;">
 							<input class="Button" type="submit" value="上传图片" />
 						</form>
 					</div>

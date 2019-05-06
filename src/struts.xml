@@ -46,5 +46,12 @@
             <result name="success">WEB-INF/video.jsp</result>
             <result name="error">WEB-INF/default.html</result>
         </action>
+        
+        <action name="upload" class="com.smu.action.UploadAction" method="execute">
+            <result name="success">userInfo.jsp</result>
+            <result name="error">upload.jsp</result>
+        </action>
+
+        <action name="getUserInfo" class="com.smu.action.LoginAction" method="getUserInfo" />
     </package>
 </struts>

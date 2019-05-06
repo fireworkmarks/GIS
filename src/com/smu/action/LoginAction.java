@@ -49,6 +49,7 @@ public class LoginAction implements Action {
             ctx.put("tip", "服务器提示：您已经成功登陆");
             ctx.getSession().put("user", getUsername());
             ctx.getSession().put("rmark", user.getUserrmark());
+            ctx.getSession().put("image", user.getUserimg());
             if (user.getPasswordadm().equals("超级管理员")) {
                 ctx.getSession().put("mark",1);
                 return SUPERADMIN;
@@ -83,9 +84,15 @@ public class LoginAction implements Action {
     public String Modify() throws Exception {
         ActionContext ctx = ActionContext.getContext();
         String userNameModify = ctx.getSession().get("user").toString();
-        System.out.println("==============================="+userNameModify);
         if (userService.modify(userNameModify,oderuserpwd,muserpwd)) return SUCCESS;
         return ERROR;
+    }
+
+    public String getUserInfo() throws Exception{
+        ActionContext ctx = ActionContext.getContext();
+        User user = userService.getUserInfo(username,userrmark);
+        ctx.getSession().put("image", getUsername());
+        return SUCCESS;
     }
 
     public String Exit() throws Exception {
@@ -93,6 +100,7 @@ public class LoginAction implements Action {
         ctx.getSession().put("rmark",null);
         ctx.getSession().put("user",null);
         ctx.getSession().put("adm",null);
+        ctx.getSession().put("image",null);
         return SUCCESS;
     }
 

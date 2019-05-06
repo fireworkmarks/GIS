@@ -19,6 +19,8 @@ public interface UserService {
 
     boolean upload(String name, String mark, String img);
 
+    User getUserInfo(String name,String mark);
+
     User getAllUser();
 
     boolean useradmin(String name, String mark, String pwdadm);

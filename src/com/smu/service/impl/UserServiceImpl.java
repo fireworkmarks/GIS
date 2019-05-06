@@ -97,6 +97,16 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    public User getUserInfo(String name,String mark){
+        User u = new User();
+        u.setUsername(name);
+        u.setUserrmark(mark);
+        List users = baseDAO.find(u);
+        if (users.size() != 0) return (User)users.get(0);
+        return null;
+    }
+
+    @Override
     public User getAllUser(){
         User u = new User();
         List users = baseDAO.find(u);

@@ -6,6 +6,8 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+<c:set var="contextPath" value="${pageContext.request.contextPath}" />
 <!DOCTYPE html>
 <html>
 <head>
@@ -28,7 +30,7 @@
         <div class="loginBoxText" >
             <div class="inputBox" >
                 <div style="margin: auto;width: 100px; height: 100px;">
-                    <img src="images/0010.jpg" style="width: 100px; height: 100px;"/>
+                    <img src="UploadFiles/${sessionScope.image}" style="width: 100px; height: 100px;"/>
                 </div>
                 <div style="margin: auto;width: 80px; ">
                     <a href="upload.jsp">更改头像</a>
