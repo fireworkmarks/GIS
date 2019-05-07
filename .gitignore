@@ -12,7 +12,6 @@
 
 # Package Files #
 *.jar
-*.war
 *.nar
 *.ear
 *.zip
@@ -28,4 +27,5 @@ out
 #Compiler file
 .idea
 .idea/*
+META-INF
 
