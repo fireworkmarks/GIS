@@ -81,6 +81,10 @@ public class LoginAction implements Action {
         return ERROR;
     }
 
+    public String toModify() throws Exception{
+        return SUCCESS;
+    }
+
     public String Modify() throws Exception {
         ActionContext ctx = ActionContext.getContext();
         String userNameModify = ctx.getSession().get("user").toString();
@@ -88,12 +92,33 @@ public class LoginAction implements Action {
         return ERROR;
     }
 
-    public String getUserInfo() throws Exception{
+    public String ModifyInfo() throws Exception{
+        User user = null;
         ActionContext ctx = ActionContext.getContext();
-        User user = userService.getUserInfo(username,userrmark);
-        ctx.getSession().put("image", getUsername());
+        String name= ctx.getSession().get("user").toString();
+        String mark= ctx.getSession().get("rmark").toString();
+        if (userrmark != null || usertel != null || userinfo !=null) {
+            user = userService.modify(name,mark,userrmark,usertel,userinfo);
+        }
+        if (user != null){
+            if (user.getPasswordadm().equals("超级管理员")) return SUPERADMIN;
+            else if (user.getPasswordadm().equals("管理员")) return ADMIN;
+            else return SUCCESS;
+        }
+        return ERROR;
+    }
+
+    public String toUserInfo() throws Exception {
+        ActionContext ctx = ActionContext.getContext();
+        String infoName= ctx.getSession().get("user").toString();
+        String infoMark= ctx.getSession().get("rmark").toString();
+        User user = userService.getUserInfo(infoName,infoMark);
+        ctx.getSession().put("user", user.getUsername());
+        ctx.getSession().put("rmark", user.getUserrmark());
+        ctx.getSession().put("image", user.getUserimg());
         return SUCCESS;
     }
+
 
     public String Exit() throws Exception {
         ActionContext ctx = ActionContext.getContext();

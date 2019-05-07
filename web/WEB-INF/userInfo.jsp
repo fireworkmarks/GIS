@@ -28,6 +28,7 @@
         <h1>用户信息</h1>
     </div>
         <div class="loginBoxText" >
+            <form action="#" method="post" onsubmit="return checkForm()">
             <div class="inputBox" >
                 <div style="margin: auto;width: 100px; height: 100px;">
                     <img src="UploadFiles/${sessionScope.image}" style="width: 100px; height: 100px;"/>
@@ -42,15 +43,15 @@
             </div>
             <div class="inputBox">
                 <label>Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-                <input class="input" type="text" id="email" name="email" placeholder="请输入邮箱"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input class="input" type="text" id="email" name="useremail" placeholder="请输入邮箱"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             </div>
             <div class="inputBox">
                 <label>电话&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-                <input class="input" type="text" id="phone" name="phone" placeholder="请输入电话号码"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input class="input" type="text" id="phone" name="usertel" placeholder="请输入电话号码"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             </div>
             <div class="inputBox">
                 <label>介绍&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-                <textarea  class="input" type="text" name="userText" id="userText" placeholder="请输入介绍" ></textarea> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <textarea  class="input" type="text" name="userinfo" id="userText" placeholder="请输入介绍" ></textarea> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <font id="error" color="red" class="error"></font>
             </div>
             <div class="Button-box">
@@ -59,6 +60,7 @@
             <div class="Button-box">
                 <input class="Button" type="button" value="取消" onclick="back()" />
             </div>
+            </form>
         </div>
 </div>
 </body>

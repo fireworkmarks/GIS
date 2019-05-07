@@ -53,8 +53,8 @@
                         <span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu xu" >
-                        <li><a href="modify.jsp?username=${sessionScope.user}">修改密码</a></li>
-                        <li><a href="userInfo.jsp?username=${sessionScope.user}">个人信息</a></li>
+                        <li><a href="tomodify.action">修改密码</a></li>
+                        <li><a href="toUserInfo.action">个人信息</a></li>
                         <li><a href="exit.action">退出</a></li>
                     </ul>
                 </li>

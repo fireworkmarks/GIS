@@ -40,7 +40,10 @@ public class UploadAction extends ActionSupport implements Action {
         ActionContext ctx = ActionContext.getContext();
         String name = ctx.getSession().get("user").toString();
         String mark = ctx.getSession().get("rmark").toString();
-        if (userService.upload(name, mark, getFile().getName())) return SUCCESS;
+        if (userService.upload(name, mark, getFile().getName())) {
+            ctx.getSession().put("image",getFile().getName());
+            return SUCCESS;
+        }
         return ERROR;
     }
 

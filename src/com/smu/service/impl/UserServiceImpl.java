@@ -66,7 +66,7 @@ public class UserServiceImpl implements UserService {
 
 
     @Override
-    public boolean modify(String name, String mark, String rmark, String tel, String info){
+    public User modify(String name, String mark, String rmark, String tel, String info){
 
         User u = new User();
         u.setUsername(name);
@@ -77,9 +77,12 @@ public class UserServiceImpl implements UserService {
             if (rmark != null) v.setUserrmark(rmark);
             if (tel != null) v.setUsertel(tel);
             if (info != null) v.setUserinfo(info);
-            return baseDAO.update(v);
+            if(baseDAO.update(v)) {
+                List user =  baseDAO.find(v);
+                return (User) user.get(0);
+            }
         }
-        return false;
+        return null;
     }
 
     @Override

@@ -15,7 +15,7 @@ public interface UserService {
 
     boolean modify(String name, String pass, String newpass);
 
-    boolean modify(String name, String mark, String rmark, String tel, String info);
+    User modify(String name, String mark, String rmark, String tel, String info);
 
     boolean upload(String name, String mark, String img);
 
